@@ -1,0 +1,31 @@
+.pageContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+  border: 1px solid var(--border);
+}
+
+.pageContainer h3 {
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+}
+
+.pageContainer p {
+  color: var(--text-secondary);
+}
+
+.placeholderBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 2px dashed var(--border);
+  background: var(--bg);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
