@@ -1,25 +1,17 @@
+import type { SearchFocus } from '../../types';
+import { GlobalSearch } from '../search/GlobalSearch';
+import { UserProfile } from './UserProfile';
 import styles from './Header.module.css';
 
 interface HeaderProps {
-  searchTerm: string;
-  onSearchChange: (value: string) => void;
+  onSelectResult: (focus: SearchFocus) => void;
 }
 
-export function Header({ searchTerm, onSearchChange }: HeaderProps) {
+export function Header({ onSelectResult }: HeaderProps) {
   return (
     <header className={styles.topHeader}>
-      <div className={styles.searchBarContainer}>
-        <input 
-          type="text" 
-          placeholder="🔍 Keresés rendszámra, márkára vagy zónára..." 
-          value={searchTerm}
-          onChange={(e) => onSearchChange(e.target.value)}
-          className={styles.globalSearchInput}
-        />
-      </div>
-      <div className={styles.userProfile}>
-        <span>(Admin)</span>
-      </div>
+      <GlobalSearch onSelectResult={onSelectResult} />
+      <UserProfile name="Admin" />
     </header>
   );
 }

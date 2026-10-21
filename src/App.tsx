@@ -5,11 +5,18 @@ import { HomePage } from './pages/HomePage';
 import { ZoneMapPage } from './pages/ZoneMapPage';
 import { FleetStatusPage } from './pages/FleetStatusPage';
 import { PerformancePage } from './pages/PerformancePage';
+import type { SearchFocus, TabId } from './types';
 import './App.css';
 
 export function App() {
-  const [activeTab, setActiveTab] = useState<'home' | 'map' | 'fleet' | 'stats'>('home');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [activeTab, setActiveTab] = useState<TabId>('home');
+  const [searchFocus, setSearchFocus] = useState<SearchFocus | null>(null);
+
+  // Keresési találat: átváltunk a Zónatérképre és odaugrunk
+  const handleSearchSelect = (focus: SearchFocus) => {
+    setSearchFocus(focus);
+    setActiveTab('map');
+  };
 
   return (
     <div className="app-container">
@@ -17,11 +24,11 @@ export function App() {
 
       <main className="main-content">
         {/* Itt hívjuk meg a különálló Header komponenst */}
-        <Header searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+        <Header onSelectResult={handleSearchSelect} />
 
         <div className="content-body">
           {activeTab === 'home' && <HomePage onNavigate={setActiveTab} />}
-          {activeTab === 'map' && <ZoneMapPage />}
+          {activeTab === 'map' && <ZoneMapPage focus={searchFocus} />}
           {activeTab === 'fleet' && <FleetStatusPage />}
           {activeTab === 'stats' && <PerformancePage />}
         </div>

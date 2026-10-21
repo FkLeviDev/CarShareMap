@@ -1,8 +1,9 @@
+import type { TabId } from '../../types';
 import styles from './Sidebar.module.css';
 
 interface SidebarProps {
-  activeTab: string;
-  onSelectTab: (tab: 'home' | 'map' | 'fleet' | 'stats') => void;
+  activeTab: TabId;
+  onSelectTab: (tab: TabId) => void;
 }
 
 export function Sidebar({ activeTab, onSelectTab }: SidebarProps) {

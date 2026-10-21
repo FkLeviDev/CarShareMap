@@ -1,0 +1,124 @@
+.spotCard {
+  --status: #8a8d91;
+  --status-soft: #f0f2f5;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px 14px 14px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.spotCard::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--status);
+}
+
+.spotCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-color: transparent;
+}
+
+/* Státusz színek */
+.free     { --status: #31a24c; --status-soft: #e6f4ea; }
+.occupied { --status: #e41e3f; --status-soft: #fdecee; }
+.charging { --status: #1877f2; --status-soft: #e7f3ff; }
+.reserved { --status: #d99a00; --status-soft: #fef6e0; }
+
+/* Telephelyi állapotok */
+.cleaning { --status: #8b5cf6; --status-soft: #f1ebff; }
+.repair   { --status: #f5793b; --status-soft: #fff0e8; }
+.ready    { --status: #31a24c; --status-soft: #e6f4ea; }
+
+.spotHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.spotNumber {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.spotStatusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--status-soft);
+  color: var(--status);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.spotStatusBadge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.charging .spotStatusBadge::before {
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+.spotBody p { margin: 0; }
+
+.spotCard .carModel {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.spotCard .plateNumber {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text-secondary);
+  font-family: ui-monospace, 'SF Mono', Consolas, monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.spotCard .emptyText {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Keresőből kiválasztott hely kiemelése */
+.highlighted {
+  border-color: var(--accent);
+  animation: highlightPulse 0.8s ease-out 3;
+}
+
+@keyframes highlightPulse {
+  0% { box-shadow: 0 0 0 0 rgba(24, 119, 242, 0.5); }
+  100% { box-shadow: 0 0 0 12px rgba(24, 119, 242, 0); }
+}

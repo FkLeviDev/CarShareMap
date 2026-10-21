@@ -1,0 +1,59 @@
+[
+  {
+    "id": "sze-campus",
+    "name": "A-Zóna: SZE Campus",
+    "types": ["pickup", "dropoff"],
+    "occupancyRate": 75,
+    "spots": [
+      { "id": "s1", "spotNumber": "A-101", "status": "occupied", "carModel": "Audi e-tron", "plateNumber": "SZE-001" },
+      { "id": "s2", "spotNumber": "A-102", "status": "charging", "carModel": "VW ID.3", "plateNumber": "SZE-002" },
+      { "id": "s3", "spotNumber": "A-103", "status": "free" },
+      { "id": "s4", "spotNumber": "A-104", "status": "reserved", "carModel": "Oktatói fenntartás", "plateNumber": "-" }
+    ]
+  },
+  {
+    "id": "gyor-belvaros",
+    "name": "B-Zóna: Belváros (Városháza)",
+    "types": ["pickup", "dropoff"],
+    "occupancyRate": 50,
+    "spots": [
+      { "id": "s5", "spotNumber": "B-201", "status": "free" },
+      { "id": "s6", "spotNumber": "B-202", "status": "occupied", "carModel": "Skoda Enyaq", "plateNumber": "GYR-105" }
+    ]
+  },
+  {
+    "id": "gyor-arkad",
+    "name": "C-Zóna: Árkád",
+    "types": ["dropoff"],
+    "occupancyRate": 33,
+    "spots": [
+      { "id": "s7", "spotNumber": "C-301", "status": "occupied", "carModel": "Renault Zoe", "plateNumber": "GYR-210" },
+      { "id": "s8", "spotNumber": "C-302", "status": "free" },
+      { "id": "s9", "spotNumber": "C-303", "status": "free" }
+    ]
+  },
+  {
+    "id": "gyor-vasutallomas",
+    "name": "D-Zóna: Vasútállomás",
+    "types": ["pickup"],
+    "occupancyRate": 67,
+    "spots": [
+      { "id": "s10", "spotNumber": "D-401", "status": "charging", "carModel": "Kia EV6", "plateNumber": "GYR-330" },
+      { "id": "s11", "spotNumber": "D-402", "status": "occupied", "carModel": "VW ID.4", "plateNumber": "GYR-331" },
+      { "id": "s12", "spotNumber": "D-403", "status": "free" }
+    ]
+  },
+  {
+    "id": "depo-ipari-park",
+    "name": "Telephely: Ipari Park",
+    "types": ["depot"],
+    "occupancyRate": 80,
+    "spots": [
+      { "id": "s13", "spotNumber": "T-01", "status": "repair", "carModel": "Skoda Enyaq", "plateNumber": "GYR-112" },
+      { "id": "s14", "spotNumber": "T-02", "status": "cleaning", "carModel": "VW ID.3", "plateNumber": "SZE-007" },
+      { "id": "s15", "spotNumber": "T-03", "status": "cleaning", "carModel": "Renault Zoe", "plateNumber": "GYR-214" },
+      { "id": "s16", "spotNumber": "T-04", "status": "ready", "carModel": "Audi e-tron", "plateNumber": "SZE-003" },
+      { "id": "s17", "spotNumber": "T-05", "status": "free" }
+    ]
+  }
+]

@@ -1,7 +1,8 @@
+import type { TabId } from '../types';
 import styles from './HomePage.module.css';
 
 interface HomePageProps {
-  onNavigate: (tab: 'map' | 'fleet' | 'stats') => void;
+  onNavigate: (tab: TabId) => void;
 } 
 
 export function HomePage({ onNavigate }: HomePageProps) {

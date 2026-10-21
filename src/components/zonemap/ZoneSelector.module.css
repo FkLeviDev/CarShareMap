@@ -1,0 +1,82 @@
+.zoneSelector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.zoneTab {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  padding: 0 8px 0 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.zoneTab:hover { background: var(--surface-hover); }
+.zoneTab:active { transform: scale(0.97); }
+
+.activeZone,
+.activeZone:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(24, 119, 242, 0.3);
+}
+
+.zoneName { white-space: nowrap; }
+
+.badge {
+  min-width: 42px;
+  height: 26px;
+  padding: 0 8px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.activeZone .badge {
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+
+.emptyNotice {
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--text-secondary);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.typeDots {
+  display: inline-flex;
+  gap: 3px;
+  margin-left: -4px;
+}
+
+.typeDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--surface);
+}
+
+.activeZone .typeDot { box-shadow: 0 0 0 2px var(--accent); }
+
+.pickup  { background: var(--zone-pickup); }
+.dropoff { background: var(--zone-dropoff); }
+.depot   { background: var(--zone-depot); }

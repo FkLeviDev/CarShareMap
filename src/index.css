@@ -12,6 +12,10 @@
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
   --sidebar-w: 260px;
 
+  --zone-pickup: #1877f2;
+  --zone-dropoff: #31a24c;
+  --zone-depot: #f5793b;
+
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.5;
@@ -43,3 +47,18 @@ h1, h2, h3 {
 p { margin: 0; }
 
 button { font-family: inherit; }
+
+kbd {
+  display: inline-grid;
+  place-items: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
