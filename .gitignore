@@ -1,0 +1,15 @@
+# Node csomagok (Soha ne kerüljenek fel!)
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Környezeti változások (Jelszavak, adatbázis elérések)
+.env
+
+# Build mappák
+dist/
+build/
+
+# Operációs rendszer fájlok
+.DS_Store
+Thumbs.db
