@@ -2,3 +2,4 @@
 export * from './zone';
 export * from './search';
 export * from './navigation';
+export * from './car';

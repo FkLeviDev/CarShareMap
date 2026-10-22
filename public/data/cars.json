@@ -1,0 +1,15 @@
+[
+  { "id": "car-1",  "plateNumber": "SZE-001", "brand": "Audi",    "model": "e-tron",  "year": 2022, "status": "available",   "batteryLevel": 82, "mileageKm": 34120, "zoneId": "sze-campus",        "spotId": "s1" },
+  { "id": "car-2",  "plateNumber": "SZE-002", "brand": "Volkswagen", "model": "ID.3", "year": 2023, "status": "charging",    "batteryLevel": 41, "mileageKm": 18950, "zoneId": "sze-campus",        "spotId": "s2" },
+  { "id": "car-3",  "plateNumber": "GYR-105", "brand": "Skoda",   "model": "Enyaq",   "year": 2023, "status": "available",   "batteryLevel": 76, "mileageKm": 22410, "zoneId": "gyor-belvaros",     "spotId": "s6" },
+  { "id": "car-4",  "plateNumber": "GYR-210", "brand": "Renault", "model": "Zoe",     "year": 2021, "status": "available",   "batteryLevel": 64, "mileageKm": 51200, "zoneId": "gyor-arkad",        "spotId": "s7" },
+  { "id": "car-5",  "plateNumber": "GYR-330", "brand": "Kia",     "model": "EV6",     "year": 2024, "status": "charging",    "batteryLevel": 28, "mileageKm": 9870,  "zoneId": "gyor-vasutallomas", "spotId": "s10" },
+  { "id": "car-6",  "plateNumber": "GYR-331", "brand": "Volkswagen", "model": "ID.4", "year": 2023, "status": "available",   "batteryLevel": 91, "mileageKm": 15630, "zoneId": "gyor-vasutallomas", "spotId": "s11" },
+  { "id": "car-7",  "plateNumber": "GYR-112", "brand": "Skoda",   "model": "Enyaq",   "year": 2022, "status": "maintenance", "batteryLevel": 55, "mileageKm": 47890, "zoneId": "depo-ipari-park",   "spotId": "s13" },
+  { "id": "car-8",  "plateNumber": "SZE-007", "brand": "Volkswagen", "model": "ID.3", "year": 2022, "status": "cleaning",    "batteryLevel": 70, "mileageKm": 38200, "zoneId": "depo-ipari-park",   "spotId": "s14" },
+  { "id": "car-9",  "plateNumber": "GYR-214", "brand": "Renault", "model": "Zoe",     "year": 2021, "status": "cleaning",    "batteryLevel": 48, "mileageKm": 58740, "zoneId": "depo-ipari-park",   "spotId": "s15" },
+  { "id": "car-10", "plateNumber": "SZE-003", "brand": "Audi",    "model": "e-tron",  "year": 2023, "status": "available",   "batteryLevel": 100, "mileageKm": 12300, "zoneId": "depo-ipari-park",  "spotId": "s16" },
+  { "id": "car-11", "plateNumber": "GYR-401", "brand": "Tesla",   "model": "Model 3", "year": 2024, "status": "rented",      "batteryLevel": 67, "mileageKm": 8420 },
+  { "id": "car-12", "plateNumber": "GYR-402", "brand": "Cupra",   "model": "Born",    "year": 2023, "status": "rented",      "batteryLevel": 39, "mileageKm": 21050 },
+  { "id": "car-13", "plateNumber": "SZE-010", "brand": "Hyundai", "model": "Kona Electric", "year": 2022, "status": "rented", "batteryLevel": 18, "mileageKm": 43960 }
+]

@@ -1,0 +1,36 @@
+.badge {
+  --c: #8a8d91;
+  --c-soft: #f0f2f5;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--c-soft);
+  color: var(--c);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.available   { --c: #31a24c; --c-soft: #e6f4ea; }
+.rented      { --c: #1877f2; --c-soft: #e7f3ff; }
+.charging    { --c: #0aa5a5; --c-soft: #e0f6f6; }
+.cleaning    { --c: #8b5cf6; --c-soft: #f1ebff; }
+.maintenance { --c: #f5793b; --c-soft: #fff0e8; }
+
+.charging::before { animation: pulse 1.4s ease-in-out infinite; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}

@@ -1,4 +1,4 @@
-import type { SearchResultKind, SpotStatus, ZoneType } from '../types';
+import type { CarStatus, SearchResultKind, SpotStatus, ZoneType } from '../types';
 
 export const ZONE_TYPE_LABELS: Record<ZoneType, string> = {
   pickup: 'Elvitel',
@@ -21,3 +21,11 @@ export const SEARCH_GROUPS: { kind: SearchResultKind; label: string; icon: strin
   { kind: 'zone', label: 'Zónák', icon: '📍' },
   { kind: 'spot', label: 'Parkolóhelyek', icon: '🅿️' },
 ];
+
+export const CAR_STATUS_LABELS: Record<CarStatus, string> = {
+  available: 'Elérhető',
+  rented: 'Bérelve',
+  charging: 'Töltődik',
+  cleaning: 'Takarítás',
+  maintenance: 'Javítás',
+};
